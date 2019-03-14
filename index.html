@@ -25,26 +25,26 @@
       <div class="row">
         <div class="six columns">
           <label>First name</label>
-          <input type="text" class="u-full-width">
+          <input id="firstName" type="text" class="u-full-width">
         </div>
         <div class="six columns">
           <label>Last name</label>
-          <input type="text" class="u-full-width">
+          <input id="lastName" type="text" class="u-full-width">
         </div>
       </div>
       <label>Briefly describe yourself</label>
-      <textarea class="u-full-width"></textarea>
+      <textarea id ="brief" class="u-full-width"></textarea>
 
       <h2>Contact</h2>
 
       <div class="row">
         <div class="six columns">
           <label>Email</label>
-          <input type="email" class="u-full-width">
+          <input id="email" type="email" class="u-full-width">
         </div>
         <div class="six columns">
           <label>Phone</label>
-          <input type="tel" class="u-full-width">
+          <input id="phone" type="tel" class="u-full-width">
         </div>
       </div>
 
@@ -57,15 +57,31 @@
         <div class="six columns">
           <h2>Preview</h2>
           <div>
-            THIS IS WHERE THE HTML PREVIEW SHOULD APPEAR
+            <h1 id="htmlPreview-name"></h1>
+            <p id="htmlPreview-describe"></p>
+            <p>
+              If you're interested in a date, you can email me at 
+              <a id="htmlPreview-email" href="mailto:EMAIL_ADDRESS" target="_blank"></a>
+              or give me a call at
+              <a id="htmlPreview-phone" href="tel:PHONE_NUMBER" target="_blank"></a>.
+            </p>
           </div>
         </div>
         <div class="six columns">
           <h2>Generated HTML</h2>
           <pre><code>
-            THIS IS WHERE THE RAW HTML SHOULD APPEAR
+            <h1 id="codePreview-name"></h1>
+            <p id="codePreview-describe"></p>
+            <p>
+              If you're interested in a date, you can email me at 
+              <a id="codePreview-email" href="mailto:EMAIL_ADDRESS" target="_blank"></a>
+              or give me a call at
+              <a id="codePreview-phone" href="tel:PHONE_NUMBER" target="_blank"></a>.
+            </p>
           </code></pre>
         </div>
       </div>
     </div>
+    <script src="dating.js"></script>
   </body>
+</html>
