@@ -7,10 +7,7 @@ var htmlPreviewName = document.getElementById('htmlPreview-name')
 var htmlPreviewDescribe = document.getElementById('htmlPreview-describe')
 var htmlPreviewEmail = document.getElementById('htmlPreview-email')
 var htmlPreviewPhone = document.getElementById('htmlPreview-phone')
-var codePreviewName = document.getElementById('codePreview-name')
-var codePreviewDescribe = document.getElementById('codePreview-describe')
-var codePreviewEmail = document.getElementById('codePreview-email')
-var codePreviewPhone = document.getElementById('codePreview-phone')
+var codePreview = document.getElementById('codePreview')
 
 var updatePreview = function () {
   var firstName = firstNameInput.value
@@ -31,17 +28,15 @@ var updatePreview = function () {
   htmlPreviewPhone.innerHTML =
     phone
 
-  codePreviewName.textContent =
-    'Hi, my name is ' + firstName + ' ' + lastName + '!'
+  codePreview.textContent =
+    '<h1>Hi, my name is ' + firstName + ' ' + lastName + '!</h1>' +
+    '<p>' + brief + '</p>' +
+    '<p>If youre interested in a date, you can email me at' +
+    '<a href="mailto:EMAIL_ADDRESS" target="_blank">' + email + '</a>' +
+    'or give me a call at' +
+    '<a id="codePreview-phone" href="tel:PHONE_NUMBER" target="_blank">' + phone + '</a>' +
+    '</p>'
 
-  codePreviewDescribe.textContent =
-    brief
-
-  codePreviewEmail.textContent =
-    email
-
-  codePreviewPhone.textContent =
-    phone
 }
 
 firstNameInput.addEventListener('input', updatePreview)
