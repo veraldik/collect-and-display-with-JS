@@ -32,11 +32,10 @@ var updatePreview = function () {
     '<h1>Hi, my name is ' + firstName + ' ' + lastName + '!</h1>' +
     '<p>' + brief + '</p>' +
     '<p>If youre interested in a date, you can email me at' +
-    '<a href="mailto:EMAIL_ADDRESS" target="_blank">' + email + '</a>' +
+    '<a href="mailto:' + email + '" target="_blank">' + email + '</a>' +
     'or give me a call at' +
-    '<a id="codePreview-phone" href="tel:PHONE_NUMBER" target="_blank">' + phone + '</a>' +
+    '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>' +
     '</p>'
-
 }
 
 firstNameInput.addEventListener('input', updatePreview)
